@@ -10,6 +10,6 @@ credit insert $WORKBOT $AMOUNT '' $WEBID work -d small -w $SMALL
 BALANCE=$(credit balance $WEBID -d small -w $SMALL)
 if [[ $BALANCE -gt $THRESHOLD ]]
 then
-  credit insert $WORKBOT $THRESHOLD '' $WEBID -d small -w $SMALL
-  credit insert $WEBID $THRESHOLD '' $WORKBOT -d medium -w $MEDIUM
+  credit insert $WEBID $THRESHOLD '' $WORKBOT bubble -d small -w $SMALL
+  credit insert $WORKBOT $THRESHOLD '' $WEBID cycle -d medium -w $MEDIUM
 fi
