@@ -29,12 +29,12 @@ after the threshold is reached an inter ledger payment for the same amount is ma
     export MEDIUM="https://localhost/wallet/test/medium#this"
     THRESHOLD=25
     AMOUNT=5
-    credit insert $WORKBOT $AMOUNT '' $WEBID work -d small -d $SMALL
+    credit insert $WORKBOT $AMOUNT '' $WEBID work -d small -w $SMALL
     BALANCE=$(credit balance $WEBID -d small -d $SMALL)
     if [[ $BALANCE -gt $THRESHOLD ]]
     then
-      credit insert $WORKBOT $THRESHOLD '' $WEBID -d small -d $SMALL
-      credit insert $WEBID $THRESHOLD '' $WORKBOT -d medium -d medium
+      credit insert $WORKBOT $THRESHOLD '' $WEBID -d small -w $SMALL
+      credit insert $WEBID $THRESHOLD '' $WORKBOT -d medium -w $MEDIUM
     fi
 
 The rebalancing doesnt need to run on an insert, it can run periodically or on demand
