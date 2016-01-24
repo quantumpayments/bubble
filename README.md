@@ -33,8 +33,8 @@ after the threshold is reached an inter ledger payment for the same amount is ma
     BALANCE=$(credit balance $WEBID -d small -d $SMALL)
     if [[ $BALANCE -gt $THRESHOLD ]]
     then
-      credit insert $WORKBOT $THRESHOLD '' $WEBID -d small -w $SMALL
-      credit insert $WEBID $THRESHOLD '' $WORKBOT -d medium -w $MEDIUM
+      credit insert $WORKBOT $THRESHOLD '' $WEBID cycle -d small -w $SMALL
+      credit insert $WEBID $THRESHOLD '' $WORKBOT bubble -d medium -w $MEDIUM
     fi
 
 The rebalancing doesnt need to run on an insert, it can run periodically or on demand
