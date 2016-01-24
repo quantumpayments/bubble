@@ -4,7 +4,7 @@ export WEBID="http://melvincarvalho.com/#me"
 export WORKBOT="https://workbot.databox.me/profile/card#me"
 export SMALL="https://localhost/wallet/small/wallet#this"
 export MEDIUM="https://localhost/wallet/medium/wallet#this"
-export LARGE="https://localhost/wallet/medium/wallet#this"
+export LARGE="https://localhost/wallet/large/wallet#this"
 
 THRESHOLD1=30
 THRESHOLD1=300
