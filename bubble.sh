@@ -11,5 +11,5 @@ BALANCE=$(credit balance $WEBID -d small -w $SMALL)
 if [[ $BALANCE -gt $THRESHOLD ]]
 then
   credit insert $WORKBOT $THRESHOLD '' $WEBID -d small -w $SMALL
-  credit insert $WEBID $THRESHOLD '' $WORKBOT -d medium -w medium
+  credit insert $WEBID $THRESHOLD '' $WORKBOT -d medium -w $MEDIUM
 fi

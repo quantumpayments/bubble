@@ -30,7 +30,7 @@ after the threshold is reached an inter ledger payment for the same amount is ma
     THRESHOLD=25
     AMOUNT=5
     credit insert $WORKBOT $AMOUNT '' $WEBID work -d small -w $SMALL
-    BALANCE=$(credit balance $WEBID -d small -d $SMALL)
+    BALANCE=$(credit balance $WEBID -d small -w $SMALL)
     if [[ $BALANCE -gt $THRESHOLD ]]
     then
       credit insert $WORKBOT $THRESHOLD '' $WEBID cycle -d small -w $SMALL
