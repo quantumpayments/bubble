@@ -7,7 +7,7 @@ export MEDIUM="https://localhost/wallet/medium/wallet#this"
 export LARGE="https://localhost/wallet/large/wallet#this"
 
 THRESHOLD1=30
-THRESHOLD1=300
+THRESHOLD2=300
 AMOUNT=5
 
 credit insert $WORKBOT $AMOUNT '' $WEBID work -d small -w $SMALL
