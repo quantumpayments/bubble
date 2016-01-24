@@ -25,8 +25,8 @@ after the threshold is reached an inter ledger payment for the same amount is ma
 # implementation
 
 
-    export SMALL="https://localhost/wallet/test/small#this"
-    export MEDIUM="https://localhost/wallet/test/medium#this"
+    export SMALL="https://localhost/wallet/small/wallet#this"
+    export MEDIUM="https://localhost/wallet/medium/wallet#this"
     THRESHOLD=25
     AMOUNT=5
     credit insert $WORKBOT $AMOUNT '' $WEBID work -d small -w $SMALL
