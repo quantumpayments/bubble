@@ -15,14 +15,21 @@ BALANCE=$(credit balance $WEBID -d small -w $SMALL)
 if [[ $BALANCE -ge $THRESHOLD1 ]]
 then
   credit insert $WEBID $THRESHOLD1 '' $WORKBOT bubble -d small -w $SMALL
-  credit insert $WORKBOT $THRESHOLD1 '' $WEBID cycle -d medium -w $MEDIUM
+  if [[ $? == 0 ]]
+    then
+    credit insert $WORKBOT $THRESHOLD1 '' $WEBID cycle -d medium -w $MEDIUM
+  fi
 
   BALANCE=$(credit balance $WEBID -d medium -w $MEDIUM)
 
   if [[ $BALANCE -ge $THRESHOLD2 ]]
   then
     credit insert $WEBID $THRESHOLD2 '' $WORKBOT bubble -d medium -w $MEDIUM
-    credit insert $WORKBOT $THRESHOLD2 '' $WEBID cycle -d large -w $LARGE
+    if [[ $? == 0 ]]
+      then
+      credit insert $WORKBOT $THRESHOLD2 '' $WEBID cycle -d large -w $LARGE
+    fi
+
   fi
 
 fi
