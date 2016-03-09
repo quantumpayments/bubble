@@ -13,3 +13,4 @@ then
   credit insert $WEBID $THRESHOLD '' $WORKBOT bubble -d small -w $SMALL
   credit insert $WORKBOT $THRESHOLD '' $WEBID cycle -d medium -w $MEDIUM
 fi
+  
